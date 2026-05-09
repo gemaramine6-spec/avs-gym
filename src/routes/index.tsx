@@ -193,7 +193,7 @@ function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
                { name: "Monthly", price: "00", per: "DT / month", features: ["Full gym access", "Locker room", "Free WiFi"], featured: false },
-              { name: "Quarterly", price: "210", per: "DT / 3 months", features: ["Full gym access", "1 PT session/month", "Nutrition guide", "Group classes"], featured: true },
+               { name: "Quarterly", price: "00", per: "DT / 3 months", features: ["Full gym access", "1 PT session/month", "Nutrition guide", "Group classes"], featured: true },
               { name: "Annual", price: "699", per: "DT / year", features: ["Full gym access", "4 PT sessions", "Nutrition plan", "All classes", "Priority booking"], featured: false },
             ].map((p) => (
               <Card key={p.name} className={`p-10 relative ${p.featured ? "bg-primary text-primary-foreground border-primary" : "bg-background border-border"}`} style={p.featured ? { boxShadow: "var(--shadow-glow)" } : {}}>
