@@ -75,11 +75,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "AVS GYM — Health Is Wealth | Beni Khiar" },
       { name: "description", content: "AVS GYM in Beni Khiar — premium training, modern equipment, expert coaches. Health is wealth. Open until 11 PM." },
       { name: "author", content: "AVS GYM" },
-      { property: "og:title", content: "AVS GYM — Health Is Wealth" },
-      { property: "og:description", content: "Premium gym in Beni Khiar. Modern equipment, expert coaches, transformative training." },
+      { property: "og:title", content: "AVS GYM — Health Is Wealth | Beni Khiar" },
+      { property: "og:description", content: "AVS GYM in Beni Khiar — premium training, modern equipment, expert coaches. Health is wealth. Open until 11 PM." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "AVS GYM — Health Is Wealth | Beni Khiar" },
+      { name: "twitter:description", content: "AVS GYM in Beni Khiar — premium training, modern equipment, expert coaches. Health is wealth. Open until 11 PM." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/GkDogwLlIhgbte6aocZ0XChXmw23/social-images/social-1778339676278-Screenshot_2026-05-09_160652.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/GkDogwLlIhgbte6aocZ0XChXmw23/social-images/social-1778339676278-Screenshot_2026-05-09_160652.webp" },
     ],
     links: [
       {
