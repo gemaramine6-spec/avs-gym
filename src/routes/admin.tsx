@@ -61,7 +61,7 @@ function AdminPage() {
   useEffect(() => { if (isAdmin) load(); }, [isAdmin]);
 
   const updateStatus = async (id: string, status: Status) => {
-    const patch: Partial<Row> = { status };
+    const patch: { status: Status; start_date?: string } = { status };
     if (status === "active") {
       const today = new Date();
       patch.start_date = today.toISOString().slice(0, 10);
