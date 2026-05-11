@@ -1,7 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Dumbbell, Flame, HeartPulse, Trophy, MapPin, Phone, Clock, Star, ArrowRight } from "lucide-react";
+import { Dumbbell, Flame, HeartPulse, Trophy, MapPin, Phone, Clock, Star, ArrowRight, User } from "lucide-react";
+import { useAuth } from "@/hooks/use-auth";
 import logo from "@/assets/logo.png";
 import hero from "@/assets/hero.jpg";
 import gymInterior from "@/assets/gym-interior.png";
@@ -12,6 +13,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
+  const { user } = useAuth();
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* NAV */}
@@ -31,9 +33,16 @@ function Home() {
             <a href="#pricing" className="hover:text-primary transition">Pricing</a>
             <a href="#contact" className="hover:text-primary transition">Contact</a>
           </nav>
-          <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
-            <a href="tel:+21623124005">Join Now</a>
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button asChild variant="ghost" size="sm">
+              <Link to={user ? "/dashboard" : "/auth"}>
+                <User className="h-4 w-4" /> {user ? "My Account" : "Sign In"}
+              </Link>
+            </Button>
+            <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
+              <Link to="/auth">Join Now</Link>
+            </Button>
+          </div>
         </div>
       </header>
 
