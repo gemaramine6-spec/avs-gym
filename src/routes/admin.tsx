@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Users } from "lucide-react";
 
 export const Route = createFileRoute("/admin")({
   head: () => ({ meta: [{ title: "Admin · AVS GYM" }] }),
@@ -82,7 +82,12 @@ function AdminPage() {
           <Link to="/dashboard" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary">
             <ArrowLeft className="h-4 w-4" /> Back to dashboard
           </Link>
-          <div className="font-display tracking-wider" style={{ fontFamily: "var(--font-display)" }}>ADMIN</div>
+          <div className="flex items-center gap-3">
+            <Button asChild variant="outline" size="sm">
+              <Link to="/admin/members"><Users className="h-4 w-4" /> Members</Link>
+            </Button>
+            <div className="font-display tracking-wider" style={{ fontFamily: "var(--font-display)" }}>ADMIN</div>
+          </div>
         </div>
       </header>
       <main className="max-w-6xl mx-auto px-6 py-12">
